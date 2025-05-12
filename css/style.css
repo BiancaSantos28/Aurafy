@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --cor-primaria: #0077b6; /* Azul vibrante para destaque */
+    --cor-secundaria: #ffffff; /* Azul claro para detalhes */
+    --cor-fundo: #001f3f; /* Fundo profundo para foco no conteúdo */
+    --cor-texto: #ffffff; /* Branco puro para contraste */
+    --cor-branca: #ffffff; /* Branco para textos e ícones */
+    --cor-submenu: #0096c7; /* Azul intenso para menus */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background-color: black;
+}
+
+.conteiner {
+    display: flex;
+}
+/* Define display, justifica e alinha conteúdo centralizado para elementos com a classe "corpo" */
+.corpo {
+    display: flex; /* Define o display como flexbox */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-family: 'Righteous', cursive; /* Define a fonte para 'Righteous' */
+  }
+  
+/* Define o layout para exibir livros */
+.mostrarLivros {
+    flex-wrap: wrap; /* Permite que o conteúdo se quebre em múltiplas linhas */
+    justify-content: space-evenly; /* Distribui o conteúdo com espaço entre os itens */
+    align-items: center; /* Alinha itens no centro verticalmente */
+    height: 100%; /* Define a altura como 100% */
+}
+
+/* Define largura, altura, tamanho de fundo e sombra para elementos com a classe "livros" */
+.livros {
+    width: 15vw; /* Define a largura como 15% da viewport */
+    height: 23vw; /* Define a altura como 23% da viewport */
+    background-size: cover; /* Redimensiona o fundo para cobrir o elemento */
+    box-shadow: 5px 5px 7px rgb(26,26,26); /* Adiciona sombra ao elemento */
+}
+
+/* Define a fonte, margem esquerda e margem inferior para elementos com a classe "titulo" */
+.titulo {
+    font-family: 'Amatic SC', cursive; /* Define a fonte para 'Amatic SC' */
+    margin-left: 32px; /* Adiciona margem à esquerda */
+    margin-bottom: 20px; /* Adiciona margem inferior */
+}
+.movie-container {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow elements to wrap onto new lines */
+    justify-content: space-between; /* Distribute space between elements */
+}
+.col-9 {
+    width: 48%; /* Adjust width as needed for desired spacing */
+    margin-bottom: 20px; /* Add space between cards */
+    display: flex;
+}
+
+
