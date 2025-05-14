@@ -17,70 +17,109 @@
 </head>
 
 <body>
-    <header>
-        <div class="conteiner cabecalho">
-            <div class="logo">
-                <img src="https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEX2T0OtE7HpWtB%2BKxYKHB9dG8nQV3uSigeRBv8hSEbMPpt91eC64jWbZ8xeLdlSFSCO7KX4rFjCOtuovzb0N61DtgCyuL7bgvThQXgVZ7HJf70XDHlfB5Tml3JNsxf13fXsBW%2FHHSajxn%2FCOPkKH4Eg%2BCD6UrwHV3loj7YsgIL5dIqkEvh35niI0VvRC887tIRXLKcqB%2Bs7rSNxopJVm6BnuQ3BI%2BxeCRKlpJ0lWES5vfuuCFEECxvAEyX%2F%2F%2BcS57%2FDixSEHkemUlits3fb01nfJqKdwRe1k%2Fib7uHko6tkFeW2wiv7Mm1JEOqi%2B7yqW%2FynrwWcqjOeKCy6ofXwdONhyfqfWRVvQyoYSTR4RkZdvbhYo7miO%2Fx6NLYjL2HB8n2JYbs3teHnmeo32EynSF1ZJKlBOw3i5QHRQQqQ4n6n947HxmrpDVgqMx8PJXVdoLqkaiPR4v%2F%2By8E1Tb3HhRzhwOffzHtcSH3zYMYNslqw4miDF1Ma7eMDQp5Ulzysl0%2BJg5XPg5EL5chkvszU%2BmNE%2FrdO1qrr95Aczu9OKg2NZRYPKnh2LNnqAkaAa7aEzb07glu5R0ySF9HVBKNlW0tG1FZqQKoZ%2B05Z9vMID9Vfug%3D%3D&allow_caching=true&sz=w512" height="100" width="100">
-            </div>
-
-            <div class="pesquisa conteiner">
-                <svg class="lupa" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000"
-                    viewBox="0 0 256 256">
-                    <path
-                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
-                    </path>
-                </svg>
-                <input class="pesquisa_input" type="search" placeholder="Pesquisar">
-            </div>
-
-            <div class="menu conteiner">
-                <button><a class="link_cabecalho" href="#">Mais Ouvidas</a></button>
-                <button><a class="link_cabecalho" href="#">Categoria</a></button>
-                <button><a class="link_cabecalho" href="/index3.html">Login<a></a></button>
-            </div>
+<header>
+    <div class="conteiner cabecalho">
+        <!-- Logo com animação vibrante -->
+        <div class="logo">
+            <div class="virtual">Aurafy</div>
         </div>
-    </header>
+
+        <!-- Campo de Pesquisa com efeito de neon -->
+        <div class="pesquisa conteiner">
+            <svg class="lupa" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000"
+                viewBox="0 0 256 256">
+                <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                </path>
+            </svg>
+            <input class="pesquisa_input" type="search" placeholder="Pesquisar músicas, artistas, playlists...">
+        </div>
+
+        <!-- Menu de Navegação com animações dinâmicas -->
+        <div class="menu conteiner">
+            <a class="link_cabecalho" href="#">Mais Ouvidas</a>
+            <a class="link_cabecalho" href="#">Gêneros</a>
+            <a class="link_cabecalho destaque" href="/index3.html">Entrar</a>
+        </div>
+    </div>
+</header>
+
 
     <main>
-        <div class="row">
+         <div class="row">
             <div class="col-2 menu">
                 <ul>
-                    <li><a href="#" class="link_menu">Mais famosos</a></li>
-                    <li class="has-sub"><a href="#" class="link_menu">Pop</a>
+                    <li><a href="/index.html" class="link_menu">Mais Famosas</a></li>
+                    <li class="has-sub"><a href="#" class="link_menu">Gêneros Musicais</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">MPB</a></li>
+                            <li><a href="#" class="link_sub_menu">KPOP</a></li>
+                            <li><a href="#" class="link_sub_menu">POP</a></li>
+                            <li><a href="#" class="link_sub_menu">Rap</a></li>
+                            <li><a href="#" class="link_sub_menu">Hip-Hop</a></li>
+                            <li><a href="#" class="link_sub_menu">Rock</a></li>
+                            <li><a href="#" class="link_sub_menu">R&B</a></li>
+                            <li><a href="#" class="link_sub_menu">Funk</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="#" class="link_menu">Sertanejo</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Top do Mês</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">Mais Ouvidas</a></li>
+                            <li><a href="#" class="link_sub_menu">Tendências</a></li>
+                            <li><a href="#" class="link_sub_menu">Lançamentos</a></li>
+            
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="#" class="link_menu">Funk</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Playlists</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">Estudo</a></li>
+                            <li><a href="#" class="link_sub_menu">Treino</a></li>
+                            <li><a href="#" class="link_sub_menu">Festa</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="#" class="link_menu">Pagode</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Décadas</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">Anos 80</a></li>
+                            <li><a href="#" class="link_sub_menu">Anos 90</a></li>
+                            <li><a href="#" class="link_sub_menu">Anos 2000</a></li>
+                            <li><a href="#" class="link_sub_menu">Anos 2020</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="#" class="link_menu">Samba</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Shows e Ao Vivo</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">Festivais</a></li>
+                            <li><a href="#" class="link_sub_menu">Gravações ao Vivo</a></li>
+                            <li><a href="#" class="link_sub_menu">Acústicos</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="/index2.html" class="link_menu">The Weeknd</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Artistas</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">Internacionais</a></li>
+                            <li><a href="#" class="link_sub_menu">Nacionais</a></li>
+                            <li><a href="#" class="link_sub_menu">Independentes</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="#" class="link_menu">Forró</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Artistas Mais Ouvidos</a>
                         <ul class="submenu">
+                            <li><a href="/index2.html" class="link_sub_menu">The Weeknd</a></li>
+                            <li><a href="#" class="link_sub_menu">Taylor Swift</a></li>
+                            <li><a href="#" class="link_sub_menu">BLACKPINK</a></li>
+                            <li><a href="#" class="link_sub_menu">Stray Kids</a></li>
+                            <li><a href="#" class="link_sub_menu">Billie Eilish</a></li>
                         </ul>
                     </li>
-                    <li class="has-sub"><a href="#" class="link_menu">Country</a>
+                    <li class="has-sub"><a href="#" class="link_menu">Álbuns</a>
                         <ul class="submenu">
+                            <li><a href="#" class="link_sub_menu">Lançamentos</a></li>
+                            <li><a href="#" class="link_sub_menu">Mais Ouvidos</a></li>
+                            <li><a href="#" class="link_sub_menu">Clássicos</a></li>
                         </ul>
                     </li>
                     <li class="has-sub"><a href="#" class="link_menu">Plataformas</a>
                         <ul class="submenu">
-                            <li><a href="https://open.spotify.com/intl-pt" class="link_sub_menu">Spotify</a></li>
+                            <li><a href="https://open.spotify.com/" class="link_sub_menu">Spotify</a></li>
+                            <li><a href="https://music.youtube.com/" class="link_sub_menu">YouTube Music</a></li>
+                            <li><a href="https://music.apple.com/" class="link_sub_menu">Apple Music</a></li>
+                            <li><a href="https://www.deezer.com/" class="link_sub_menu">Deezer</a></li>
                         </ul>
                     </li>
             </div>
@@ -90,7 +129,7 @@
                     <div class="card">
                         <img src="https://upload.wikimedia.org/wikipedia/pt/c/c8/SZA_-_SOS.png" alt="Musicas">
                         <h4>SOS-Sza</h4>
-                        <h2>R$ 22,90</h2>
+                        <h2>R$ 252,99</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -98,7 +137,7 @@
                     <div class="card">
                         <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/b/ba/313x0w.jpg/250px-313x0w.jpg" alt="Musicas">
                         <h4>Blonde-Feak Ocean</h4>
-                        <h2>R$ 22,90</h2>
+                        <h2>R$ 422,90</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -106,7 +145,7 @@
                     <div class="card">
                         <img src="https://lastfm.freetls.fastly.net/i/u/500x500/92d551a6a7ba71b82196be0c956e3da0.jpg" alt-="Musicas">
                         <h4>Scarlet-Doja Cat</h4>
-                        <h2>R$ 25,90</h2>
+                        <h2>R$ 259,99</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -114,7 +153,7 @@
                     <div class="card">
                         <img src="https://m.media-amazon.com/images/I/81LqOaYCRjL._UF1000,1000_QL80_.jpg" alt-="Musicas">
                         <h4>Isolation-Kali Uchis</h4>
-                        <h2>R$ 34,90</h2>
+                        <h2>R$ 534,95</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -122,7 +161,7 @@
                     <div class="card">
                         <img src="https://monkeybuzz.com.br/wp-content/uploads/2022/02/mitski.jpg" alt-="Musicas">
                         <h4>Laurel Hell-Mitski</h4>
-                        <h2>R$ 19,90</h2>
+                        <h2>R$ 189,90</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -130,7 +169,7 @@
                     <div class="card">
                         <img src="https://monkeybuzz.com.br/wp-content/uploads/2017/07/tyler-the-creator-flower-boy-59776a7116d93.jpg" alt-="Musicas">
                         <h4>Flower Boy-Tyler The Creator</h4>
-                        <h2>R$ 26,50</h2>
+                        <h2>R$ 206,55</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -138,7 +177,7 @@
                     <div class="card">
                         <img src="https://akamai.sscdn.co/uploadfile/letras/albuns/e/6/8/e/1136961681997899.jpg" alt-="Musicas">
                         <h4>NOEASY-Stray Kids (2021)</h4>
-                        <h2>R$ 24,50</h2>
+                        <h2>R$ 284,50</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -146,7 +185,7 @@
                     <div class="card">
                         <img src="https://m.media-amazon.com/images/I/A1MwaIeBpwL._UF894,1000_QL80_.jpg" alt-="Musicas">
                         <h4>In Rainbows-Radiohead</h4>
-                        <h2>R$ 23,50</h2>
+                        <h2>R$ 239,99</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -154,7 +193,7 @@
                     <div class="card">
                         <img src="https://i.scdn.co/image/ab67616d0000b273b9c6525411d2baf9c7443632" alt-="Musicas">
                         <h4>alligator bites never heal-Doechii</h4>
-                        <h2>R$ 25,00</h2>
+                        <h2>R$ 215,99</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -162,7 +201,7 @@
                     <div class="card">
                         <img src="https://m.media-amazon.com/images/I/710b4gHtuJL._UF894,1000_QL80_.jpg" alt-="Musicas">
                         <h4> Hatful of Hollow-The Smiths</h4>
-                        <h2>R$ 26,50</h2>
+                        <h2>R$ 267,99</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -170,7 +209,7 @@
                     <div class="card">
                         <img src="https://cdn-images.dzcdn.net/images/cover/975b8e921822b6e01de1663ef02cee08/1900x1900-000000-80-0-0.jpg" alt-="Musicas">
                         <h4>Love deluxe-Sade</h4>
-                        <h2>R$ 26,50</h2>
+                        <h2>R$ 276,99</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
@@ -178,20 +217,13 @@
                     <div class="card">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqwC7-8lIOTCSvAVFXydmEPvba9AfmV7H85g&s" alt-="Musicas">
                         <h4>"Awaken, My Love!"-Childsh Gambino</h4>
-                        <h2>R$ 30,50</h2>
+                        <h2>R$ 300,50</h2>
                         <button type="submit">Comprar</button>
                         <button type="submit">Detalhes</button>
                     </div>
                 </div>
             </div>
 
-            <div class="col-9">
-                <div class="rotulo">
-                    <h1 class="titulo">Músicas</h1>
-                </div>
-                <div class="container mostrarMusicas"></div>
-                <div class="container mostrarDetalheMusicas"></div>
-            </div>
         </div>
     </main>
 

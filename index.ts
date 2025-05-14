@@ -14,21 +14,56 @@ app.post("/login", async (request: FastifyRequest, reply: FastifyReply) => {
             host: "localhost",
             user: 'root',
             password: "",
-            database: 'Aurafy', // Nome do banco de dados
+            database: 'Aurafy',
             port: 3306
         });
 
-        // Verificando se o usuário e a senha existem no banco de dados
-        const [result] = await conn.query("SELECT * FROM usuarios WHERE usuario = ? AND senha = ?", [usuario, senha]);
+        const [rows] = await conn.query("SELECT * FROM usuarios WHERE usuario = ? AND senha = ?", [usuario, senha]);
 
-        if (result.length > 0) {
+        const usuarios = rows as any[];
+
+        if (usuarios.length > 0) {90
             reply.status(200).send({ mensagem: "Login bem-sucedido!" });
         } else {
-            reply.status(400).send({ mensagem: "Usuário ou senha inválidos." });
+            reply.status(401).send({ mensagem: "Usuário ou senha inválidos." });
+        }
+    } catch (erro: any) {
+        console.error("Erro no login:", erro);
+        reply.status(500).send({ mensagem: "Erro no servidor, tente novamente mais tarde." });
+    }
+});
+
+app.delete("/deletar-conta", async (request: FastifyRequest, reply: FastifyReply) => {
+    const { usuario, senha } = request.body as any;
+
+    try {
+        const conn = await mysql.createConnection({
+            host: "localhost",
+            user: 'root',
+            password: "",
+            database: 'Aurafy',
+            port: 3306
+        });
+
+        // Verifica se o usuário e a senha estão corretos
+        const [rows] = await conn.query("SELECT * FROM usuarios WHERE usuario = ? AND senha = ?", [usuario, senha]);
+        const usuarios = rows as any[];
+
+        if (usuarios.length === 0) {
+            reply.status(401).send({ mensagem: "Usuário ou senha inválidos. Conta não deletada." });
+            return;
         }
 
+        // Deleta a conta
+        const [resultado] = await conn.query("DELETE FROM usuarios WHERE usuario = ? AND senha = ?", [usuario, senha]);
+
+        if ((resultado as any).affectedRows > 0) {
+            reply.status(200).send({ mensagem: "Conta deletada com sucesso." });
+        } else {
+            reply.status(500).send({ mensagem: "Erro ao deletar a conta." });
+        }
     } catch (erro: any) {
-        console.log(erro);
+        console.error("Erro ao deletar conta:", erro);
         reply.status(500).send({ mensagem: "Erro no servidor, tente novamente mais tarde." });
     }
 });

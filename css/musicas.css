@@ -1,43 +1,56 @@
-conteiner{
+conteiner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /*Permite que os itens quebem linha ao usar uma resolução menor*/
+    justify-content: space-around; /* Permite que os itens quebrem linha ao usar uma resolução menor */
 }
-.card{
+
+.card {
     border: 1px solid var(--cor-fundo);
-    border-radius: 8px; /*Arredonda os cantos da borda*/
-    padding: 16px; /*Adiciona espaço interno*/
+    border-radius: 8px; /* Arredonda os cantos da borda */
+    padding: 16px; /* Adiciona espaço interno */
     margin-bottom: 16px;
     width: 200px;
     text-align: center;
-    box-sizing: border-box; /**/
+    box-sizing: border-box;
     color: var(--cor-texto);
-  
+    background-color: #000; /* Garante contraste se o fundo for escuro */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transição suave para o hover */
 }
-.card img{
+
+/* Efeito de "subir" e "acender" ao passar o mouse */
+.card:hover {
+    transform: translateY(-10px); /* Sobe 10px */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(63, 124, 255, 0.678); /* Sombra mais forte e brilho */
+    filter: brightness(1.2); /* Aumenta o brilho */
+}
+
+.card img {
     max-width: 100%;
     border-radius: 8px;
     display: flex;
 }
-.card h4 h2{
+
+.card h4 h2 {
     margin-top: 8px;
     color: var(--cor-secundaria);
 }
+
 button {
     width: 195px; /* Define a largura do botão */
     max-width: 100%; /* Garante que o botão não ultrapasse a largura do container */
     padding: 8px; /* Adiciona espaço interno ao redor do texto do botão */
     background-color: var(--cor-fundo); /* Define a cor de fundo do botão */
-    border: 80px; /* Remove a borda padrão do botão */
+    border: none; /* Remove a borda corretamente */
     border-radius: 8px; /* Arredonda os cantos do botão */
     color: var(--cor-secundaria); /* Define a cor do texto do botão */
     font-size: 16px; /* Define o tamanho da fonte do texto do botão */
     cursor: pointer; /* Altera o cursor para uma mãozinha quando passa sobre o botão */
     margin-top: 7px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza transições */
 }
 
 /* Define o estilo do botão ao passar o mouse sobre ele */
-button:hover{
-    background-color: var(--cor-submenu); /* Muda a cor de fundo do botão para a cor primária ao passar o mouse */
-    color: var(--cor-branca); /* Muda a cor do texto do botão para branco ao passar o mouse */
+button:hover {
+    background-color: var(--cor-submenu); /* Muda a cor de fundo do botão */
+    color: var(--cor-branca); /* Muda a cor do texto do botão para branco */
 }
