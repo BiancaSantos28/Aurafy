@@ -68,37 +68,6 @@ app.delete("/deletar-conta", async (request: FastifyRequest, reply: FastifyReply
         reply.status(500).send({ mensagem: "Erro no servidor, tente novamente mais tarde." });
     }
 });
-import fastifyFormbody from '@fastify/formbody';
-app.register(fastifyFormbody);
-app.post("/cadastrar-musica", async (request: FastifyRequest, reply: FastifyReply) => {
-    const { titulo, artista, genero, album } = request.body as any;
-
-    if (!titulo || !artista) {
-        reply.status(400).send({ mensagem: "Título e artista são obrigatórios." });
-        return;
-    }
-
-    try {
-        const conn = await mysql.createConnection({
-            host: "localhost",
-            user: 'root',
-            password: "",
-            database: 'Aurafy',
-            port: 3306
-        });
-
-        await conn.query(
-            "INSERT INTO musicas (titulo, artista, genero, album) VALUES (?, ?, ?, ?)",
-            [titulo, artista, genero || null, album || null]
-        );
-
-        reply.status(200).send({ mensagem: "Música cadastrada com sucesso!" });
-    } catch (erro) {
-        console.error("Erro ao cadastrar música:", erro);
-        reply.status(500).send({ mensagem: "Erro ao cadastrar música." });
-    }
-});
-
 
 
 // Inicializando o servidor
