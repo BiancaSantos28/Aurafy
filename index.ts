@@ -6,7 +6,6 @@ const app = fastify();
 app.register(cors);
 
 
-// Endpoint para login
 app.post("/login", async (request: FastifyRequest, reply: FastifyReply) => {
     const { usuario, senha } = request.body as any;
 
@@ -46,7 +45,7 @@ app.delete("/deletar-conta", async (request: FastifyRequest, reply: FastifyReply
             port: 3306
         });
 
-        // Verifica se o usuário e a senha estão corretos
+
         const [rows] = await conn.query("SELECT * FROM usuarios WHERE usuario = ? AND senha = ?", [usuario, senha]);
         const usuarios = rows as any[];
 
@@ -55,7 +54,7 @@ app.delete("/deletar-conta", async (request: FastifyRequest, reply: FastifyReply
             return;
         }
 
-        // Deleta a conta
+
         const [resultado] = await conn.query("DELETE FROM usuarios WHERE usuario = ? AND senha = ?", [usuario, senha]);
 
         if ((resultado as any).affectedRows > 0) {
@@ -70,7 +69,7 @@ app.delete("/deletar-conta", async (request: FastifyRequest, reply: FastifyReply
 });
 
 
-// Inicializando o servidor
+
 app.listen({ port: 8001 }, (erro, endereco) => {
     if (erro) {
         console.log("ERRO: Fastify não iniciou");
